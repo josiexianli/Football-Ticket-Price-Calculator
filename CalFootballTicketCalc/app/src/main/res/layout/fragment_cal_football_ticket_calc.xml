@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xli.calfootballticketcalc.CalFootballTicketCalcFragment"
+    tools:showIn="@layout/activity_cal_football_ticket_calc">
+
+    <TextView
+        android:id="@+id/cal_tickets_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/cal_footbal"
+        android:textSize="@dimen/size_30" />
+
+    <EditText
+        android:id="@+id/cal_tickets_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cal_tickets_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_25"
+        android:ems="10"
+        android:hint="@string/ticket_hint"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/cal_tickets_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cal_tickets_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_20"
+        android:entries="@array/Games" />
+
+    <Button
+        android:id="@+id/cal_tickets_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cal_tickets_game"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_20"
+        android:text="@string/find_cost"
+        android:textSize="@dimen/size_20" />
+
+    <TextView
+        android:id="@+id/cal_tickets_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cal_tickets_cost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/cal_ticket_stadium_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cal_tickets_result"
+        android:layout_marginTop="@dimen/margin_20"
+        android:contentDescription="@string/picture_description"
+        app:srcCompat="@drawable/cal_stadium" />
+</RelativeLayout>
